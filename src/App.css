@@ -120,3 +120,62 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-primary);
   color: #ffffff;
 }
+ /* --- Hero --- */
+.hero-section {
+  position: relative;
+  min-height: 78vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding: 64px 16px;
+  color: #0a0a0a;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* soft overlay to improve text contrast */
+  background: rgba(10, 67, 120, 0.10);
+}
+
+.hero-inner {
+  position: relative; /* above overlay */
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero-inner h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(36px, 6vw, 64px);
+  margin: 0 0 12px;
+  color: #0a0a0a;
+}
+
+.hero-inner p {
+  margin: 0 0 24px;
+  opacity: 0.9;
+}
+
+.button-group {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 12px;
+}
+
+.btn.primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn.outline:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
